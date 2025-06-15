@@ -58,16 +58,11 @@ class _MainScreenState extends State<MainScreen> {
         selectedItemColor: Colors.deepPurple,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.edit_calendar),
-            label: "Planner",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.format_quote),
-            label: "Quotes",
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.edit_calendar), label: "Planner"),
+          BottomNavigationBarItem(icon: Icon(Icons.format_quote), label: "Quotes"),
         ],
       ),
     );
   }
 }
+
