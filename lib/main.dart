@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'home.dart'; // Import HomePage
 import 'planner.dart'; // Import PlannerPage
 import 'quotes.dart'; // Import QuotesPage
-
+// Entry point of the Flutter app
 void main() {
-  runApp(const MyApp());
+  runApp(const MyApp());// Runs the root widget
 }
 
 // MAIN APP
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({super.key});// Constructor
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MainScreen(),
+      home: const MainScreen(),// First screen to show
     );
   }
 }
@@ -34,7 +34,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 0;// Tracks the selected bottom nav item
 
   final List<Widget> _screens = [
     const HomePage(),
@@ -57,12 +57,17 @@ class _MainScreenState extends State<MainScreen> {
         onTap: _onItemTapped,
         selectedItemColor: Colors.deepPurple,
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.edit_calendar), label: "Planner"),
-          BottomNavigationBarItem(icon: Icon(Icons.format_quote), label: "Quotes"),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),// Home tab
+          BottomNavigationBarItem(
+            icon: Icon(Icons.edit_calendar),
+            label: "Planner",  // Planner tab
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.format_quote),
+            label: "Quotes", // Quotes tab
+          ),
         ],
       ),
     );
   }
 }
-
